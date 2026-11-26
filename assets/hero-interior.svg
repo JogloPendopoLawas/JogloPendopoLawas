@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Interior pendopo joglo saat senja dengan atap tumpang sari berlapis">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#080d14"/>
+      <stop offset="0.4" stop-color="#141b26"/>
+      <stop offset="0.72" stop-color="#3a2a22"/>
+      <stop offset="1" stop-color="#0d0907"/>
+    </linearGradient>
+    <radialGradient id="warmGlow" cx="50%" cy="43%" r="55%">
+      <stop offset="0" stop-color="#ffd79b" stop-opacity="0.85"/>
+      <stop offset="0.3" stop-color="#e3a45c" stop-opacity="0.42"/>
+      <stop offset="0.62" stop-color="#a8642f" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#a8642f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tier0" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d130d"/><stop offset="1" stop-color="#0d0907"/>
+    </linearGradient>
+    <linearGradient id="tier1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a1a11"/><stop offset="1" stop-color="#170f0a"/>
+    </linearGradient>
+    <linearGradient id="tier2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#392215"/><stop offset="1" stop-color="#20140d"/>
+    </linearGradient>
+    <linearGradient id="tier3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#492b19"/><stop offset="1" stop-color="#2a1a10"/>
+    </linearGradient>
+    <linearGradient id="tier4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#59341d"/><stop offset="1" stop-color="#342012"/>
+    </linearGradient>
+    <linearGradient id="tier5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6a3f22"/><stop offset="1" stop-color="#3f2615"/>
+    </linearGradient>
+    <linearGradient id="tier6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7d4b27"/><stop offset="1" stop-color="#4c2e18"/>
+    </linearGradient>
+    <linearGradient id="tier7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8f572d"/><stop offset="1" stop-color="#5a371c"/>
+    </linearGradient>
+    <linearGradient id="tier8" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a46634"/><stop offset="1" stop-color="#6a4220"/>
+    </linearGradient>
+    <linearGradient id="beamShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#120c08"/><stop offset="1" stop-color="#060403"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="46%" r="72%">
+      <stop offset="0.45" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#050302" stop-opacity="0.82"/>
+    </radialGradient>
+    <filter id="blurBig" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+    <filter id="blurSoft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="11" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <ellipse cx="800" cy="430" rx="720" ry="470" fill="url(#warmGlow)"/>
+
+  <!-- concentric roof tiers (tumpang sari) -->
+  <g>
+    <rect x="-250" y="-230" width="2100" height="1302" fill="url(#tier0)" stroke="#b98c55" stroke-opacity="0.16"/>
+    <rect x="-80" y="-126" width="1760" height="1091" fill="url(#tier1)" stroke="#c39a63" stroke-opacity="0.18"/>
+    <rect x="80" y="-26" width="1440" height="893" fill="url(#tier2)" stroke="#c9a46f" stroke-opacity="0.2"/>
+    <rect x="220" y="60" width="1160" height="719" fill="url(#tier3)" stroke="#c9a46f" stroke-opacity="0.22"/>
+    <rect x="350" y="141" width="900" height="558" fill="url(#tier4)" stroke="#d3ad76" stroke-opacity="0.24"/>
+    <rect x="470" y="214" width="660" height="409" fill="url(#tier5)" stroke="#d3ad76" stroke-opacity="0.26"/>
+    <rect x="580" y="282" width="440" height="273" fill="url(#tier6)" stroke="#dcb880" stroke-opacity="0.3"/>
+    <rect x="680" y="344" width="240" height="149" fill="url(#tier7)" stroke="#e3c18b" stroke-opacity="0.34"/>
+    <rect x="758" y="394" width="84" height="52" fill="url(#tier8)" stroke="#f0d09a" stroke-opacity="0.42"/>
+  </g>
+
+  <!-- rafters radiating to the apex -->
+  <g stroke="#e7bb7e" stroke-opacity="0.14" stroke-width="2.5">
+    <path d="M800 420 L-250 -230 M800 420 L1850 -230 M800 420 L-250 1072 M800 420 L1850 1072"/>
+    <path d="M800 420 L800 -230 M800 420 L-250 420 M800 420 L1850 420 M800 420 L800 1072"/>
+    <path d="M800 420 L80 -26 M800 420 L1520 -26 M800 420 L80 867 M800 420 L1520 867"/>
+  </g>
+
+  <!-- carved frieze dots on the largest tiers -->
+  <g fill="none" stroke="#e3b77a" stroke-opacity="0.22" stroke-dasharray="2 20" stroke-width="2">
+    <rect x="220" y="60" width="1160" height="719"/>
+    <rect x="350" y="141" width="900" height="558"/>
+    <rect x="470" y="214" width="660" height="409"/>
+  </g>
+
+  <!-- hanging lamp at the molo -->
+  <g>
+    <circle cx="800" cy="470" r="66" fill="#ffcf94" opacity="0.22" filter="url(#blurBig)"/>
+    <line x1="800" y1="420" x2="800" y2="452" stroke="#c9a46f" stroke-width="2" stroke-opacity="0.7"/>
+    <circle cx="800" cy="470" r="18" fill="none" stroke="#f0cf9a" stroke-width="1.6" stroke-opacity="0.85"/>
+    <circle cx="800" cy="470" r="6" fill="#ffe3b4" opacity="0.9"/>
+  </g>
+
+  <!-- foreground carved beams -->
+  <g>
+    <path d="M0 1000 L0 742 L96 768 L188 872 L262 1000 Z" fill="url(#beamShade)"/>
+    <path d="M1600 1000 L1600 742 L1504 768 L1412 872 L1338 1000 Z" fill="url(#beamShade)"/>
+    <g fill="none" stroke="#c9a46f" stroke-opacity="0.14" stroke-width="1.6">
+      <path d="M28 800 C 70 812, 92 844, 112 884"/>
+      <path d="M52 782 C 96 798, 122 836, 142 878"/>
+      <path d="M1572 800 C 1530 812, 1508 844, 1488 884"/>
+      <path d="M1548 782 C 1504 798, 1478 836, 1458 878"/>
+    </g>
+  </g>
+
+  <rect width="1600" height="1000" fill="url(#vignette)"/>
+  <rect width="1600" height="1000" filter="url(#grain)" opacity="0.14" style="mix-blend-mode:overlay"/>
+</svg>

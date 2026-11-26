@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Sambungan purus dua balok jati tanpa paku">
+  <defs>
+    <linearGradient id="backdrop" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#241710"/>
+      <stop offset="0.6" stop-color="#150e09"/>
+      <stop offset="1" stop-color="#0b0705"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a4693a"/>
+      <stop offset="0.18" stop-color="#7f4c26"/>
+      <stop offset="0.7" stop-color="#5a3318"/>
+      <stop offset="1" stop-color="#331c0e"/>
+    </linearGradient>
+    <linearGradient id="post" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3d2211"/>
+      <stop offset="0.22" stop-color="#7c4a24"/>
+      <stop offset="0.6" stop-color="#6b3f1f"/>
+      <stop offset="1" stop-color="#2c180c"/>
+    </linearGradient>
+    <linearGradient id="tenon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c08a52"/>
+      <stop offset="1" stop-color="#7a4a26"/>
+    </linearGradient>
+    <radialGradient id="light" cx="38%" cy="26%" r="70%">
+      <stop offset="0" stop-color="#f0c288" stop-opacity="0.3"/>
+      <stop offset="0.55" stop-color="#b5783f" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.55"/>
+    </radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.004 0.12" numOctaves="5" seed="8" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.7"/></feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#backdrop)"/>
+  <ellipse cx="600" cy="430" rx="520" ry="330" fill="url(#light)"/>
+
+  <!-- vertical post behind the beam -->
+  <rect x="500" y="90" width="200" height="720" fill="url(#post)"/>
+  <g stroke="#2a1609" stroke-opacity="0.45" fill="none" stroke-linecap="round">
+    <path d="M520 100 C 560 240, 520 380, 545 520 S 520 700, 540 800" stroke-width="2.5"/>
+    <path d="M600 100 C 570 220, 615 380, 590 520 S 620 700, 600 800" stroke-width="2"/>
+    <path d="M670 100 C 640 240, 690 380, 665 520 S 690 700, 675 800" stroke-width="2.5"/>
+  </g>
+
+  <!-- tenon tip protruding above the beam -->
+  <path d="M536 300 H664 V420 H536 Z" fill="url(#tenon)"/>
+  <path d="M536 300 H664" stroke="#d9a56b" stroke-opacity="0.55" stroke-width="2"/>
+
+  <!-- horizontal beam -->
+  <rect x="60" y="400" width="1080" height="210" fill="url(#beam)"/>
+  <rect x="60" y="400" width="1080" height="6" fill="#c08a52" opacity="0.4"/>
+  <g stroke="#2a1609" stroke-opacity="0.4" fill="none" stroke-linecap="round">
+    <path d="M80 455 C 300 430, 500 470, 760 445 S 1030 470, 1130 450" stroke-width="3"/>
+    <path d="M80 510 C 280 540, 520 490, 780 520 S 1030 540, 1130 515" stroke-width="2.2"/>
+    <path d="M80 570 C 320 545, 540 585, 800 555 S 1040 570, 1130 560" stroke-width="3.4"/>
+  </g>
+
+  <!-- mortise shadow and wedges -->
+  <rect x="536" y="400" width="128" height="210" fill="#1a0e07" opacity="0.42"/>
+  <path d="M536 400 H664" stroke="#e0b07a" stroke-opacity="0.5" stroke-width="1.5"/>
+  <path d="M536 610 H664" stroke="#e0b07a" stroke-opacity="0.28" stroke-width="1.5"/>
+  <g fill="#241309" stroke="#8a5a30" stroke-opacity="0.6" stroke-width="1">
+    <path d="M540 428 l22 0 -6 26 -22 0 Z"/>
+    <path d="M638 428 l22 0 6 26 -22 0 Z"/>
+  </g>
+
+  <!-- joint shadows -->
+  <path d="M500 400 V610" stroke="#0c0704" stroke-opacity="0.6" stroke-width="3"/>
+  <path d="M700 400 V610" stroke="#0c0704" stroke-opacity="0.45" stroke-width="2"/>
+  <path d="M60 610 H1140" stroke="#0a0503" stroke-opacity="0.55" stroke-width="4"/>
+
+  <!-- carved rosette on the beam end -->
+  <g transform="translate(150 505)" fill="none" stroke="#d8a76c" stroke-opacity="0.42">
+    <circle r="42" stroke-width="1.4"/>
+    <circle r="26" stroke-width="1.1"/>
+    <path d="M0 -26 L0 26 M-26 0 L26 0 M-18 -18 L18 18 M-18 18 L18 -18" stroke-width="1"/>
+    <circle r="6" fill="#d8a76c" fill-opacity="0.25" stroke="none"/>
+  </g>
+
+  <rect width="1200" height="900" filter="url(#grain)" opacity="0.32" style="mix-blend-mode:overlay"/>
+  <rect width="1200" height="900" fill="url(#light)" opacity="0.55"/>
+</svg>

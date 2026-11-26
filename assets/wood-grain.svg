@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Tekstur serat kayu jati lawas">
+  <defs>
+    <linearGradient id="teak" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#7a4a26"/>
+      <stop offset="0.32" stop-color="#5c3519"/>
+      <stop offset="0.68" stop-color="#40230f"/>
+      <stop offset="1" stop-color="#25140a"/>
+    </linearGradient>
+    <radialGradient id="sheen" cx="30%" cy="18%" r="75%">
+      <stop offset="0" stop-color="#e0a768" stop-opacity="0.34"/>
+      <stop offset="0.5" stop-color="#b87a40" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#1a0d05" stop-opacity="0.42"/>
+    </radialGradient>
+    <radialGradient id="edge" cx="50%" cy="50%" r="72%">
+      <stop offset="0.55" stop-color="#0a0503" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0a0503" stop-opacity="0.66"/>
+    </radialGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.0025 0.085" numOctaves="6" seed="17" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.85"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="fineGrain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.4" numOctaves="4" seed="5" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.35"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1200" fill="url(#teak)"/>
+
+  <!-- long hand-cut grain lines -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M-40 90 C 190 70, 330 150, 520 120 S 840 40, 960 90" stroke="#1c0e06" stroke-opacity="0.45" stroke-width="5"/>
+    <path d="M-40 170 C 170 200, 360 140, 560 190 S 820 260, 960 210" stroke="#2a160b" stroke-opacity="0.5" stroke-width="3"/>
+    <path d="M-40 300 C 220 260, 400 350, 620 310 S 860 260, 960 320" stroke="#1a0d06" stroke-opacity="0.4" stroke-width="7"/>
+    <path d="M-40 430 C 150 470, 380 400, 600 460 S 830 520, 960 470" stroke="#2c1709" stroke-opacity="0.45" stroke-width="3"/>
+    <path d="M-40 560 C 210 520, 420 610, 640 560 S 850 520, 960 590" stroke="#190c05" stroke-opacity="0.5" stroke-width="6"/>
+    <path d="M-40 700 C 180 740, 390 660, 610 720 S 850 780, 960 720" stroke="#2a160b" stroke-opacity="0.4" stroke-width="3"/>
+    <path d="M-40 850 C 220 810, 430 900, 650 840 S 860 800, 960 870" stroke="#1a0d06" stroke-opacity="0.45" stroke-width="7"/>
+    <path d="M-40 980 C 160 1020, 390 940, 610 1000 S 850 1060, 960 1000" stroke="#2c1709" stroke-opacity="0.4" stroke-width="3"/>
+    <path d="M-40 1110 C 210 1070, 420 1160, 640 1110 S 850 1080, 960 1140" stroke="#190c05" stroke-opacity="0.45" stroke-width="5"/>
+
+    <path d="M-40 230 C 200 210, 380 280, 600 240 S 840 190, 960 240" stroke="#a4683a" stroke-opacity="0.18" stroke-width="2"/>
+    <path d="M-40 500 C 180 540, 400 470, 620 530 S 850 560, 960 520" stroke="#b87a44" stroke-opacity="0.16" stroke-width="2"/>
+    <path d="M-40 780 C 200 740, 410 830, 630 780 S 860 740, 960 800" stroke="#a4683a" stroke-opacity="0.16" stroke-width="2"/>
+  </g>
+
+  <!-- knot -->
+  <g fill="none" stroke="#1e1008" stroke-opacity="0.55">
+    <ellipse cx="655" cy="760" rx="26" ry="52" stroke-width="4"/>
+    <ellipse cx="655" cy="760" rx="44" ry="84" stroke-width="2.5" stroke-opacity="0.4"/>
+    <ellipse cx="655" cy="760" rx="62" ry="116" stroke-width="1.6" stroke-opacity="0.28"/>
+  </g>
+
+  <!-- micro grain and light -->
+  <rect width="900" height="1200" filter="url(#grain)" opacity="0.55" style="mix-blend-mode:multiply"/>
+  <rect width="900" height="1200" filter="url(#fineGrain)" opacity="0.22" style="mix-blend-mode:overlay"/>
+  <rect width="900" height="1200" fill="url(#sheen)"/>
+  <rect width="900" height="1200" fill="url(#edge)"/>
+</svg>

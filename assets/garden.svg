@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Pendopo joglo di taman tropis minimalis saat senja, terpantul di kolam">
+  <defs>
+    <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c1320"/>
+      <stop offset="0.34" stop-color="#222a35"/>
+      <stop offset="0.58" stop-color="#5c3f31"/>
+      <stop offset="0.72" stop-color="#a4703f"/>
+      <stop offset="0.8" stop-color="#6c4529"/>
+      <stop offset="1" stop-color="#161211"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffd9a0" stop-opacity="0.9"/>
+      <stop offset="0.4" stop-color="#e8a25c" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#e8a25c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffd79b" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#ffd79b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1d16"/>
+      <stop offset="1" stop-color="#120d0a"/>
+    </linearGradient>
+    <linearGradient id="pool" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2224"/>
+      <stop offset="0.5" stop-color="#0d1213"/>
+      <stop offset="1" stop-color="#080b0c"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#dusk)"/>
+  <ellipse cx="1080" cy="590" rx="430" ry="240" fill="url(#sun)"/>
+
+  <!-- distant treeline -->
+  <g fill="#101a1a" opacity="0.85">
+    <path d="M0 640 C 90 590, 150 600, 210 620 C 260 570, 330 585, 370 620 C 430 590, 500 600, 540 635 Z"/>
+    <path d="M1050 630 C 1120 585, 1200 596, 1240 625 C 1300 570, 1390 590, 1430 625 C 1490 595, 1560 605, 1600 640 Z"/>
+  </g>
+
+  <!-- pendopo roof: tumpang sari silhouette -->
+  <g>
+    <ellipse cx="800" cy="560" rx="330" ry="90" fill="url(#lampGlow)" opacity="0.6" filter="url(#soft)"/>
+    <!-- lowest eave -->
+    <path d="M470 600 C 540 540, 660 512, 800 512 C 940 512, 1060 540, 1130 600 L1110 614 C 1030 570, 930 552, 800 552 C 670 552, 570 570, 490 614 Z" fill="url(#roof)"/>
+    <path d="M470 600 C 540 540, 660 512, 800 512 C 940 512, 1060 540, 1130 600" fill="none" stroke="#c08a52" stroke-opacity="0.55" stroke-width="2.4"/>
+    <!-- middle tier -->
+    <path d="M545 520 C 610 466, 700 444, 800 444 C 900 444, 990 466, 1055 520 L1038 534 C 975 494, 895 478, 800 478 C 705 478, 625 494, 562 534 Z" fill="#1c1410"/>
+    <path d="M545 520 C 610 466, 700 444, 800 444 C 900 444, 990 466, 1055 520" fill="none" stroke="#c08a52" stroke-opacity="0.42" stroke-width="2"/>
+    <!-- top tier -->
+    <path d="M630 448 C 685 402, 745 386, 800 386 C 855 386, 915 402, 970 448 L956 461 C 908 428, 856 416, 800 416 C 744 416, 692 428, 644 461 Z" fill="#18110d"/>
+    <path d="M630 448 C 685 402, 745 386, 800 386 C 855 386, 915 402, 970 448" fill="none" stroke="#d1a068" stroke-opacity="0.55" stroke-width="2"/>
+    <!-- ridge ornament -->
+    <path d="M800 386 V352 M788 358 H812" stroke="#d1a068" stroke-opacity="0.65" stroke-width="2"/>
+    <circle cx="800" cy="348" r="4" fill="#e0b47c" opacity="0.8"/>
+  </g>
+
+  <!-- pillars and warm interior -->
+  <g>
+    <rect x="560" y="596" width="16" height="170" fill="#0f0b08"/>
+    <rect x="780" y="596" width="16" height="170" fill="#0f0b08"/>
+    <rect x="1024" y="596" width="16" height="170" fill="#0f0b08"/>
+    <ellipse cx="800" cy="664" rx="190" ry="52" fill="#f0b56f" opacity="0.24" filter="url(#soft)"/>
+    <g fill="#f5c98d" opacity="0.75">
+      <circle cx="720" cy="660" r="4"/>
+      <circle cx="880" cy="660" r="4"/>
+    </g>
+    <g fill="none" stroke="#c08a52" stroke-opacity="0.25">
+      <path d="M600 600 V760 M700 600 V760 M900 600 V760 M1000 600 V760"/>
+    </g>
+  </g>
+
+  <!-- platform -->
+  <path d="M400 766 H1200 L1160 792 H440 Z" fill="#15100d"/>
+  <path d="M400 766 H1200" stroke="#b9844f" stroke-opacity="0.4" stroke-width="2"/>
+  <path d="M440 792 H1160 L1140 806 H460 Z" fill="#100c09"/>
+
+  <!-- pool -->
+  <rect y="806" width="1600" height="194" fill="url(#pool)"/>
+  <g opacity="0.5" filter="url(#soft)">
+    <rect x="700" y="810" width="200" height="120" fill="#c08a52" opacity="0.28"/>
+    <rect x="600" y="820" width="60" height="90" fill="#e0a45f" opacity="0.18"/>
+    <rect x="940" y="820" width="60" height="90" fill="#e0a45f" opacity="0.18"/>
+  </g>
+  <g stroke="#d8b582" stroke-opacity="0.16" stroke-width="1.4" fill="none">
+    <path d="M180 850 H520 M640 880 H980 M1080 852 H1430"/>
+    <path d="M260 910 H560 M760 940 H1100 M1180 905 H1420"/>
+    <path d="M120 968 H420 M900 972 H1240"/>
+  </g>
+  <rect y="806" width="1600" height="194" fill="url(#pool)" opacity="0.35"/>
+
+  <!-- foreground planting silhouettes -->
+  <g fill="#0a0f0d">
+    <path d="M0 1000 V860 C 60 840, 90 900, 130 880 C 160 930, 210 900, 240 1000 Z"/>
+    <path d="M1600 1000 V850 C 1540 830, 1500 900, 1460 880 C 1430 930, 1380 900, 1350 1000 Z"/>
+  </g>
+  <g fill="none" stroke="#2c3a32" stroke-opacity="0.7" stroke-width="3">
+    <path d="M80 1000 C 110 920, 90 870, 140 820 M140 1000 C 150 930, 200 900, 220 840"/>
+    <path d="M1520 1000 C 1490 920, 1510 870, 1460 820 M1460 1000 C 1450 930, 1400 900, 1380 840"/>
+  </g>
+
+  <rect width="1600" height="1000" filter="url(#grain)" opacity="0.12" style="mix-blend-mode:overlay"/>
+</svg>
